@@ -38,6 +38,8 @@ class Availability(db.Model):
     av_date = db.Column(db.Date, nullable=False)
     reserved = db.Column(db.Boolean, default=False)
 
+    reservations = db.relationship('Reservation', backref='availability')
+
 
 @dataclass
 class Reservation(db.Model):
@@ -51,4 +53,4 @@ class Reservation(db.Model):
     title = db.Column(db.String(255), nullable=False)
     owner_email = db.Column(db.String(255), nullable=True)
     email = db.Column(db.String(255), nullable=False)
-    availability_id = db.Column(db.Integer, nullable=False)
+    availability_id = db.Column(db.Integer, db.ForeignKey("availability.id", ondelete='cascade'), nullable=False)
