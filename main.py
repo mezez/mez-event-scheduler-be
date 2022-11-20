@@ -9,6 +9,7 @@ from models.event_scheduler import db
 from resources.availability_create import AvailabilityCreate
 from resources.reservation_create import ReservationCreate
 from resources.availability_read import AvailabilityRead
+from resources.date_availability_read import AvailabilityByDate
 from resources.reservation_read import ReservationRead
 
 config = configparser.ConfigParser()
@@ -28,10 +29,11 @@ with app.app_context():
     api = Api(app)
 
 
-api.add_resource(AvailabilityCreate, '/availabilities/create')
-api.add_resource(AvailabilityRead, '/availabilities/')
-api.add_resource(ReservationCreate, '/reservations/create')
-api.add_resource(ReservationRead, '/reservations')
+    api.add_resource(AvailabilityCreate, '/api/availabilities/create')
+api.add_resource(AvailabilityRead, '/api/availabilities')
+api.add_resource(AvailabilityByDate, '/api/availabilities-by-date/<int:day>/<int:month>/<int:year>')
+api.add_resource(ReservationCreate, '/api/reservations/create')
+api.add_resource(ReservationRead, '/api/reservations')
 
 # api.add_resource(Delete, '/console/<string:something>/<int:somethingElse')
 # api.add_resource(Delete, '/console/bin-delete')
