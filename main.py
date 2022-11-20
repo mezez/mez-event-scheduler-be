@@ -25,7 +25,7 @@ with app.app_context():
     db.init_app(app)
 
     # run first time and remove
-    db.create_all()
+    # db.create_all()
 
     api = Api(app)
 
