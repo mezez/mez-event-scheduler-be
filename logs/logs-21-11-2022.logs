@@ -1,8 +1,0 @@
-00:08:23,488 root INFO create-req:::{"start": "1100", "end": "1130", "year": "2022", "month": "11", "day": "21", "av_date": "2022-11-22"}
-00:08:23,512 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:23] "POST /api/availabilities/create HTTP/1.1" 200 -
-00:08:35,508 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:35] "GET /api/availabilities-by-date/20/11/2022 HTTP/1.1" 200 -
-00:08:36,512 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:36] "GET /api/availabilities-by-date/21/11/2022 HTTP/1.1" 200 -
-00:08:42,626 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:42] "OPTIONS /api/reservations/create HTTP/1.1" 200 -
-00:08:42,629 root INFO create-req:::{"title": "reservervation for cvekemam@gmail.com", "email": "cvekemam@gmail.com", "availability_id": 1}
-00:08:42,648 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:42] "POST /api/reservations/create HTTP/1.1" 200 -
-00:08:59,163 werkzeug INFO 127.0.0.1 - - [21/Nov/2022 00:08:59] "GET /api/availabilities HTTP/1.1" 200 -
