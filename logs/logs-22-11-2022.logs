@@ -1,0 +1,20 @@
+02:41:49,636 root INFO create-req:::{"start": "0900", "end": "0930", "year": "2023", "month": "01", "day": "01", "av_date": "2023-01-01"}
+02:41:49,689 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 02:41:49] "POST /api/availabilities/create HTTP/1.1" 200 -
+02:42:52,181 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 02:42:52] "GET /api/availabilities-by-date/01/01/2023 HTTP/1.1" 200 -
+02:42:59,282 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 02:42:59] "GET /api/availabilities-by-date/1/1/2023 HTTP/1.1" 200 -
+03:33:13,436 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 99}
+03:33:26,33 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 3}
+03:35:25,864 werkzeug INFO  * Detected change in 'C:\\Users\\admin\\PycharmProjects\\calendar-event-scheduler\\resources\\reservation_create.py', reloading
+03:35:29,453 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 3}
+03:35:46,620 werkzeug INFO  * Detected change in 'C:\\Users\\admin\\PycharmProjects\\calendar-event-scheduler\\resources\\reservation_create.py', reloading
+03:35:47,771 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 3}
+03:35:55,303 werkzeug INFO  * Detected change in 'C:\\Users\\admin\\PycharmProjects\\calendar-event-scheduler\\resources\\reservation_create.py', reloading
+03:35:56,663 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 3}
+03:36:51,278 werkzeug INFO  * Detected change in 'C:\\Users\\admin\\PycharmProjects\\calendar-event-scheduler\\resources\\reservation_create.py', reloading
+03:36:55,310 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 33}
+03:36:55,348 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 03:36:55] "POST /api/reservations/create HTTP/1.1" 200 -
+03:37:12,151 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 03:37:12] "GET /api/availabilities HTTP/1.1" 200 -
+03:37:43,298 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 8}
+03:37:43,305 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 03:37:43] "POST /api/reservations/create HTTP/1.1" 200 -
+03:37:49,993 root INFO create-req:::{"title": "Sample reservation", "email": "cve@gmail.com", "availability_id": 3}
+03:37:50,21 werkzeug INFO 127.0.0.1 - - [22/Nov/2022 03:37:50] "POST /api/reservations/create HTTP/1.1" 200 -

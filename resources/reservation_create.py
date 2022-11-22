@@ -1,5 +1,7 @@
 import json
 import configparser
+import sys
+
 import requests
 from flask_restful import Resource
 from flask import request, jsonify
@@ -23,13 +25,21 @@ class ReservationCreate(Resource):
 
         # save data
         my_helper.saveLog("create-req:::" + json.dumps(req_data))
+
+        # ensure availability is valid
+        availability = Availability.query.get(req_data['availability_id'])
+        if availability is None:
+            response_payload = {"status_code": 404, "message": "No availability found for availability id"}
+            return response_payload
+
+        if availability.reserved:
+            response_payload = {"status_code": 500, "message": "Slot has already been booked"}
+            return response_payload
+
+        availability.reserved = True
         data = Reservation(title=req_data['title'], email=req_data['email'],
                            availability_id=req_data['availability_id'], owner_email='ekemammezez@gmail.com')
         db.session.add(data)
-
-        availability = Availability.query.get(req_data['availability_id'])
-        availability.reserved = True
-
         db.session.commit()
 
         response_payload = {"status_code": 200, "message": "success"}
